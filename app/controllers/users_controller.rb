@@ -11,6 +11,22 @@ class UsersController < ApplicationController
     redirect_to controller: 'users', action: 'show'
   end
 
+  # def create
+  #   @user = User.create(user_params)
+  #   if @user.valid?
+  #     @user.save
+  #     session[:user_id] = @user.id
+  #     flash[:success] = 'Account created'
+  #     redirect_to controller: 'users', action: 'show'
+  #   # elsif @user.errors.messages.include?(:email)
+  #   #   flash[:errors] = @user.errors.["Oups... it seams that you already have an account!"]
+  #   #   redirect_to signup_path
+  #   else
+  #     flash[:errors] = @user.errors.full_messages
+  #     redirect_to signup_path
+  #   end
+  # end
+
   def show
     @wishlist = @user.wishlist if @user.wishlist
     #We can then iterate over all gorups to show each memeber ina users groups
