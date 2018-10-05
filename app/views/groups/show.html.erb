@@ -39,7 +39,7 @@
               <% else %>
                 <p><%=user.name.capitalize%> doesn't have any wishlist yet!</p>
               <% end %>
-            <ul>
+            </ul>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
@@ -51,12 +51,7 @@
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#<%= user.name %>">
       <%= user.name %>
     </button>
-    <!-- <% user = user%>
-      <li><%= link_to user.name, show_path %> </li> -->
-
       <% end %>
-
-
     </div>
 
         <% if @draws %>
